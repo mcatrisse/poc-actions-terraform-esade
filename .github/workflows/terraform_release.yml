@@ -14,6 +14,7 @@ jobs:
           cat << EOF > backend.conf
             bucket = "${S3_BUCKET}"
             key    = "terraform.tfstate"
+            use_lockfile = true
             region = "us-east-1"
           EOF
         env:
